@@ -1,0 +1,23 @@
+Report
+
+You have a title page, and the paper is structured. For the final report, I will expect an abstract.
+
+•You do not have a conclusion.
+
+•If the category is a non-exhaustive list of values (I am referring to the ellipsis), then the category should be an entity set.
+
+•You did not refer Figure 1 in the text. If that figure is not mentioned in the text, one can ask what the point of that figure is.
+
+ERD
+
+•Simple, but to the point. Using multi-valued attributes will result in exciting challenges later in your project.
+
+•You have reduced multi-valued attributes with an attribute "order." You can keep your solution, but bear in mind that this reduction to ER is not correct. I acknowledge that you saw this approach two years ago, but there is a conceptual mistake in this reduction. I am happy to elaborate on this next week if you remind me.
+
+SQL
+
+•You have provided a schema, but you will need to provide examples in your schema.
+
+Overall.
+
+OK start!
