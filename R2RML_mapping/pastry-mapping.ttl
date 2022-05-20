@@ -1,0 +1,287 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>
+@prefix fcc: <http://www.example.org/ont#>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<#Food>
+	a rr:TripleMap ;
+
+	 rr:logicalTable [ rr:tableName "FOOD" ] ;
+
+	 rr:subjectMap [
+	 	rr:template "http://data.exemple.org/food/{ID}" ;
+	 	rr:class fcc:food ;
+	 ] ; 
+
+	 rr:predicateObjectMap [
+	 	rr:predicate rdfs:label ;
+	 	rr:objectMap [
+	 		rr:column "NAME" ;
+	 	] ;
+	 	rr:objectMap [
+	 		rr:column "NAME" ;
+	 		rr:language "en" ;
+	 	] ;
+	 ] ;
+
+	 rr:predicateObjectMap [
+	 	rr:predicate fcc:fat ;
+	 	rr:objectMap [
+	 		rr:column "FAT" ;
+	 		rr:datatype xsd:double ;
+	 	] ;
+	 ] ;
+
+	 rr:predicateObjectMap [
+	 	rr:predicate fcc:sugar ;
+	 	rr:objectMap [
+	 		rr:column "SUGAR" ;
+	 		rr:datatype xsd:double ;
+	 	] ;
+	 ] ;
+
+	 rr:predicateObjectMap [
+	 	rr:predicate fcc:kcal ;
+	 	rr:objectMap [
+	 		rr:column "KCAL" ;
+	 		rr:datatype xsd:double ;
+	 	] ;
+	 ] .
+
+<#Categories>
+	a rr:TripleMap ;
+
+	 rr:logicalTable [ rr:tableName "CATEGORIES" ] ;
+
+	 rr:subjectMap [
+	 	rr:template "http://data.exemple.org/category/{CAT_ID}" ;
+	 	rr:class fcc:category ;
+	 ] ; 
+
+	 rr:predicateObjectMap [
+	 	rr:predicate rdfs:label ;
+	 	rr:objectMap [
+	 		rr:column "CATEGORY" ;
+	 	] ;
+	 	rr:objectMap [
+	 		rr:column "CATEGORY" ;
+	 		rr:language "en" ;
+	 	] ;
+	 ] ;
+
+	 rr:predicateObjectMap [
+	 	rr:predicate fcc:hasFood ;
+	 	rr:objectMap [
+	 		rr:parentTriplesMap <#Food> ;
+	 		rr:joinCondition [
+	 			rr:child "FOOD_ID" ;
+	 			rr:parent "ID" ;
+	 		] ;
+	 	] ;
+	 ] .
+
+
+<#Recipe>
+	a rr:TripleMap ;
+
+	 rr:logicalTable [ rr:tableName "RECIPE" ] ;
+
+	 rr:subjectMap [
+	 	rr:template "http://data.exemple.org/recipe/{ID}" ;
+	 	rr:class fcc:recipe ;
+	 ] ; 
+
+	 rr:predicateObjectMap [
+	 	rr:predicate rdfs:label ;
+	 	rr:objectMap [
+	 		rr:column "NAME" ;
+	 	] ;
+	 	rr:objectMap [
+	 		rr:column "NAME" ;
+	 		rr:language "en" ;
+	 	] ;
+	 ] ;
+
+	 rr:predicateObjectMap [
+	 	rr:predicate fcc:description ;
+	 	rr:objectMap [
+	 		rr:column "DESCRIPTION" ;
+	 		rr:datatype xsd:string ;
+	 	] ;
+	 ] .
+
+<#Tool>
+	a rr:TripleMap ;
+
+	 rr:logicalTable [ rr:tableName "TOOL" ] ;
+
+	 rr:subjectMap [
+	 	rr:template "http://data.exemple.org/tool/{ID}" ;
+	 	rr:class fcc:tool ;
+	 ] ; 
+
+	 rr:predicateObjectMap [
+	 	rr:predicate rdfs:label ;
+	 	rr:objectMap [
+	 		rr:column "NAME" ;
+	 	] ;
+	 	rr:objectMap [
+	 		rr:column "NAME" ;
+	 		rr:language "en" ;
+	 	] ;
+	 ] ;
+
+	 rr:predicateObjectMap [
+	 	rr:predicate fcc:instruction ;
+	 	rr:objectMap [
+	 		rr:column "INSTRUCTIONS_FOR_USE" ;
+	 		rr:datatype xsd:string ;
+	 	] ;
+	 ] .
+
+<#FoodRequired>
+	a rr:TripleMap ;
+
+	 rr:logicalTable [ rr:tableName "FOODREQUIRED" ] ;
+
+	 rr:subjectMap [
+	 	rr:template "http://data.exemple.org/food_required/{RECIPE_ID}:{STEP_NB}:{FOOD_ID}" ;
+	 	rr:class fcc:food_required ;
+	 ] ; 
+
+	 rr:predicateObjectMap [
+	 	rr:predicate rdfs:label ;
+	 	rr:objectMap [
+	 		rr:template "{RECIPE_ID}:{STEP_NB}:{FOOD_ID}" ;
+	 	] ;
+	 ] ;
+
+
+	 rr:predicateObjectMap [
+	 	rr:predicate fcc:value ;
+	 	rr:objectMap [
+	 		rr:column "VALUE" ;
+	 		rr:datatype xsd:double ;
+	 	] ;
+	 ] ;
+
+	 rr:predicateObjectMap [
+	 	rr:predicate fcc:unit ;
+	 	rr:objectMap [
+	 		rr:column "UNIT" ;
+	 		rr:datatype xsd:string ;
+	 	] ;
+	 ] ;
+
+	 rr:predicateObjectMap [
+	 	rr:predicate fcc:unit ;
+	 	rr:objectMap [
+	 		rr:column "UNIT" ;
+	 		rr:datatype xsd:string ;
+	 	] ;
+	 ] ;
+
+	 rr:predicateObjectMap [
+	 	rr:predicate fcc:hasStep ;
+	 	rr:objectMap [
+	 		rr:parentTriplesMap <#Step> ;
+	 		rr:joinCondition [
+	 			rr:child "STEP_NB" ;
+	 			rr:parent "STEP_NB" ;
+	 		] ;
+	 		rr:joinCondition [
+	 			rr:child "RECIPE_ID" ;
+	 			rr:parent "RECIPE_ID" ;
+	 		] ;
+	 	] ;
+	 ] ;
+
+	 rr:predicateObjectMap [
+	 	rr:predicate fcc:hasFood ;
+	 	rr:objectMap [
+	 		rr:parentTriplesMap <#Food> ;
+	 		rr:joinCondition [
+	 			rr:child "FOOD_ID" ;
+	 			rr:parent "ID" ;
+	 		] ;
+	 	] ;
+	 ] .
+
+<#ToolRequired>
+	a rr:TripleMap ;
+
+	 rr:logicalTable [ rr:tableName "TOOLREQUIRED" ] ;
+
+	 rr:subjectMap [
+	 	rr:template "http://data.exemple.org/food_required/{RECIPE_ID}:{STEP_NB}:{TOOL_ID}" ;
+	 	rr:class fcc:tool_required ;
+	 ] ; 
+
+	 rr:predicateObjectMap [
+	 	rr:predicate rdfs:label ;
+	 	rr:objectMap [
+	 		rr:template "{RECIPE_ID}:{STEP_NB}:{TOOL_ID}" ;
+	 	] ;
+	 ] ;
+
+	 rr:predicateObjectMap [
+	 	rr:predicate fcc:hasStep ;
+	 	rr:objectMap [
+	 		rr:parentTriplesMap <#Step> ;
+	 		rr:joinCondition [
+	 			rr:child "STEP_NB" ;
+	 			rr:parent "STEP_NB" ;
+	 		] ;
+	 		rr:joinCondition [
+	 			rr:child "RECIPE_ID" ;
+	 			rr:parent "RECIPE_ID" ;
+	 		] ;
+	 	] ;
+	 ] ;
+
+	 rr:predicateObjectMap [
+	 	rr:predicate fcc:hasTool ;
+	 	rr:objectMap [
+	 		rr:parentTriplesMap <#Tool> ;
+	 		rr:joinCondition [
+	 			rr:child "TOOL_ID" ;
+	 			rr:parent "ID" ;
+	 		] ;
+	 	] ;
+	 ] .
+
+<#Step>
+	a rr:TripleMap ;
+
+	 rr:logicalTable [ rr:tableName "STEP" ] ;
+
+	 rr:subjectMap [
+	 	rr:template "http://data.exemple.org/food_required/{RECIPE_ID}:{STEP_NB}" ;
+	 	rr:class fcc:step ;
+	 ] ; 
+
+	 rr:predicateObjectMap [
+	 	rr:predicate rdfs:label ;
+	 	rr:objectMap [
+	 		rr:template "{RECIPE_ID}:{STEP_NB}" ;
+	 	] ;
+	 ] ;
+
+	 rr:predicateObjectMap [
+	 	rr:predicate fcc:description ;
+	 	rr:objectMap [
+	 		rr:column "DESCRIPTION" ;
+	 		rr:datatype xsd:string ;
+	 	] ;
+	 ] ;
+
+	 rr:predicateObjectMap [
+	 	rr:predicate fcc:hasRecipe ;
+	 	rr:objectMap [
+	 		rr:parentTriplesMap <#Recipe> ;
+	 		rr:joinCondition [
+	 			rr:child "RECIPE_ID" ;
+	 			rr:parent "ID" ;
+	 		] ;
+	 	] ;
+	 ] .

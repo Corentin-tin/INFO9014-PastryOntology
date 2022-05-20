@@ -1,0 +1,16 @@
+food_id,cat_id,category
+1,1,vegetarian
+1,2,vegan
+2,1,vegetarian
+2,3,gluten-free
+3,1,vegetarian
+3,3,gluten-free
+4,1,vegetarian
+4,2,vegan
+4,3,gluten-free
+5,1,vegetarian
+5,2,vegan
+5,3,gluten-free
+6,1,vegetarian
+6,2,vegan
+6,3,gluten-free
