@@ -56,7 +56,18 @@
 ###  http://www.semanticweb.org/pastry#categories
 :categories rdf:type owl:DatatypeProperty ;
             rdfs:domain :Food ;
-            rdfs:range rdfs:Literal .
+            rdfs:range [ rdf:type rdfs:Datatype ;
+                         owl:oneOf [ rdf:type rdf:List ;
+                                     rdf:first "gluten-free" ;
+                                     rdf:rest [ rdf:type rdf:List ;
+                                                rdf:first "vegan" ;
+                                                rdf:rest [ rdf:type rdf:List ;
+                                                           rdf:first "vegetarian" ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                   ]
+                       ] .
 
 
 ###  http://www.semanticweb.org/pastry#fat
