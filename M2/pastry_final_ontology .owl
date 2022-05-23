@@ -45,11 +45,7 @@
 
 ###  http://www.semanticweb.org/pastry#uses_tool
 :uses_tool rdf:type owl:ObjectProperty ;
-           rdfs:domain [ rdf:type owl:Class ;
-                         owl:unionOf ( :Recipe
-                                       :Step
-                                     )
-                       ] ;
+           rdfs:domain :Step ;
            rdfs:range :Kitchen_tool .
 
 
