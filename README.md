@@ -1,6 +1,6 @@
 # INFO9014-PastryOntology
 
-![](https://github.com/Corentin-tin/INFO9014-PastryOntology/blob/main/illu.png?raw=true | width=100)
+![](https://github.com/Corentin-tin/INFO9014-PastryOntology/blob/main/illu.png | width=100)
 
 ![alt text](https://github.com/Corentin-tin/INFO9014-PastryOntology/blob/main/illu.png?raw=true | width=100)
 
