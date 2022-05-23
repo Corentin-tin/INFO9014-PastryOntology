@@ -61,145 +61,155 @@
 ###  http://www.semanticweb.org/pastry#categories
 :categories rdf:type owl:DatatypeProperty ;
             rdfs:domain :Food ;
-            rdfs:range [ rdf:type rdfs:Datatype ;
-                         owl:oneOf [ rdf:type rdf:List ;
-                                     rdf:first "gluten-free" ;
-                                     rdf:rest [ rdf:type rdf:List ;
-                                                rdf:first "vegan" ;
-                                                rdf:rest [ rdf:type rdf:List ;
-                                                           rdf:first "vegetarian" ;
-                                                           rdf:rest rdf:nil
-                                                         ]
-                                              ]
-                                   ]
-                       ] .
+            rdfs:range rdfs:Literal .
 
 
-###  http://www.semanticweb.org/pastry#fat_content
-:fat_content rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Food ;
-             rdfs:range xsd:float .
+###  http://www.semanticweb.org/pastry#fat
+:fat rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Food ;
+     rdfs:range xsd:double .
 
 
-###  http://www.semanticweb.org/pastry#kcal_content
-:kcal_content rdf:type owl:DatatypeProperty ;
-              rdfs:domain :Food ;
-              rdfs:range xsd:float .
+###  http://www.semanticweb.org/pastry#food_id
+:food_id rdf:type owl:DatatypeProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain :Food ;
+         rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/pastry#food_name
+:food_name rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Food ;
+           rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/pastry#instructions_for_use
+:instructions_for_use rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Kitchen_tool ;
+                      rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/pastry#kcal
+:kcal rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Food ;
+      rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/pastry#quantity
+:quantity rdf:type owl:DatatypeProperty ;
+          rdfs:domain [ rdf:type owl:Restriction ;
+                        owl:onProperty :has_ingredient ;
+                        owl:someValuesFrom :Food
+                      ] ;
+          rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/pastry#recipe_description
+:recipe_description rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Recipe ;
+                    rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/pastry#recipe_id
+:recipe_id rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :Recipe ;
+           rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/pastry#recipe_name
+:recipe_name rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Recipe ;
+             rdfs:range rdfs:Literal .
 
 
 ###  http://www.semanticweb.org/pastry#step_description
 :step_description rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Step ;
-                  rdfs:range xsd:string .
+                  rdfs:range rdfs:Literal .
 
 
-###  http://www.semanticweb.org/pastry#step_number
-:step_number rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Step ;
-             rdfs:range xsd:unsignedInt .
+###  http://www.semanticweb.org/pastry#step_nb
+:step_nb rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Step ;
+         rdfs:range xsd:double .
 
 
-###  http://www.semanticweb.org/pastry#sugar_content
-:sugar_content rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Food ;
-               rdfs:range xsd:float .
+###  http://www.semanticweb.org/pastry#sugar
+:sugar rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Food ;
+       rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/pastry#tool_id
+:tool_id rdf:type owl:DatatypeProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain :Kitchen_tool ;
+         rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/pastry#tool_name
+:tool_name rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Kitchen_tool ;
+           rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/pastry#unit
+:unit rdf:type owl:DatatypeProperty ;
+      rdfs:domain [ rdf:type owl:Restriction ;
+                    owl:onProperty :has_ingredient ;
+                    owl:someValuesFrom :Food
+                  ] ;
+      rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/pastry#value
+:value rdf:type owl:DatatypeProperty ;
+       rdfs:domain [ rdf:type owl:Restriction ;
+                     owl:onProperty :has_ingredient ;
+                     owl:someValuesFrom :Food
+                   ] ;
+       rdfs:range xsd:double .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/pastry#Cereal
-:Cereal rdf:type owl:Class ;
-        rdfs:subClassOf :Food ;
-        rdfs:comment "Cereal: grain used as food."@en ;
-        rdfs:label "cereal"@en ,
-                   "céréal"@fr .
-
-
-###  http://www.semanticweb.org/pastry#Dairy_product
-:Dairy_product rdf:type owl:Class ;
-               rdfs:subClassOf :Food ;
-               rdfs:comment "Dairy product: food containing or made from milk."@en ;
-               rdfs:label "dairy product"@en ,
-                          "produit laitier"@fr .
-
-
-###  http://www.semanticweb.org/pastry#Dish
-:Dish rdf:type owl:Class ;
-      rdfs:subClassOf :Kitchen_tool ;
-      owl:disjointWith :Pan ;
-      rdfs:comment "Dish: a shallow, flat-bottomed kitchen tool container for cooking or serving food."@en ;
-      rdfs:label "dish"@en ,
-                 "plat"@fr .
-
-
 ###  http://www.semanticweb.org/pastry#Food
 :Food rdf:type owl:Class ;
+      owl:hasKey ( :food_id
+                 ) ;
       rdfs:comment "Food: any nutritious substance that people eat or drink."@en ;
       rdfs:label "food"@en ,
                  "nourriture"@fr .
 
 
-###  http://www.semanticweb.org/pastry#Fruit
-:Fruit rdf:type owl:Class ;
-       rdfs:subClassOf :Food ;
-       rdfs:comment "Fruit: the sweet and fleshy product of a tree or other plant that contains seed and can be eaten as food."@en ;
-       rdfs:label "fruit"@en ,
-                  "fruit"@fr .
-
-
 ###  http://www.semanticweb.org/pastry#Kitchen_tool
 :Kitchen_tool rdf:type owl:Class ;
+              owl:hasKey ( :tool_id
+                         ) ;
               rdfs:comment "Kitchen tool: object used for food preparation such as baking, mixing, containing, ..."@en ;
               rdfs:label "kitchen tool"@en ,
                          "ustensile"@fr .
 
 
-###  http://www.semanticweb.org/pastry#Nut
-:Nut rdf:type owl:Class ;
-     rdfs:subClassOf :Fruit ;
-     rdfs:comment "Nut: a fruit consisting of a hard or tough shell around an edible kernel."@en ;
-     rdfs:label "fruit à coque"@fr ,
-                "nut"@en .
-
-
-###  http://www.semanticweb.org/pastry#Pan
-:Pan rdf:type owl:Class ;
-     rdfs:subClassOf :Kitchen_tool ;
-     rdfs:comment "Pan: a metal kitchen tool container used for cooking food in."@en ;
-     rdfs:label "pan"@en ,
-                "poële"@fr .
-
-
 ###  http://www.semanticweb.org/pastry#Recipe
 :Recipe rdf:type owl:Class ;
+        owl:hasKey ( :recipe_id
+                   ) ;
         rdfs:comment "Recipe: a set of instructions for making something from various ingredients and tools."@en ;
         rdfs:label "recette"@fr ,
                    "recipe"@en .
 
 
-###  http://www.semanticweb.org/pastry#Spice
-:Spice rdf:type owl:Class ;
-       rdfs:subClassOf :Food ;
-       rdfs:comment "Spice: an aromatic or pungent food used to flavour food."@en ;
-       rdfs:label "spice"@en ,
-                  "épice"@fr .
-
-
 ###  http://www.semanticweb.org/pastry#Step
 :Step rdf:type owl:Class ;
+      owl:hasKey ( :step_nb
+                 ) ;
       rdfs:comment "Step: An instruction or proceeding occurring as one in a series."@en ;
       rdfs:label "step"@en ,
                  "étape"@fr .
-
-
-###  http://www.semanticweb.org/pastry#Vegetable
-:Vegetable rdf:type owl:Class ;
-           rdfs:subClassOf :Food ;
-           rdfs:comment "Vegetable: a plant or part of a plant used as food, such as a cabbage, potato, turnip, or bean."@en ;
-           rdfs:label "légume"@fr ,
-                      "vegetable"@en .
 
 
 #################################################################
