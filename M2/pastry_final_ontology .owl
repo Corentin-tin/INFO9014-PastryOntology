@@ -73,7 +73,7 @@
 :food_id rdf:type owl:DatatypeProperty ,
                   owl:FunctionalProperty ;
          rdfs:domain :Food ;
-         rdfs:range xsd:double .
+         rdfs:range xsd:integer .
 
 
 ###  http://www.semanticweb.org/pastry#food_name
@@ -104,7 +104,7 @@
 :recipe_id rdf:type owl:DatatypeProperty ,
                     owl:FunctionalProperty ;
            rdfs:domain :Recipe ;
-           rdfs:range xsd:double .
+           rdfs:range xsd:integer .
 
 
 ###  http://www.semanticweb.org/pastry#recipe_name
@@ -122,7 +122,7 @@
 ###  http://www.semanticweb.org/pastry#step_nb
 :step_nb rdf:type owl:DatatypeProperty ;
          rdfs:domain :Step ;
-         rdfs:range xsd:double .
+         rdfs:range xsd:integer .
 
 
 ###  http://www.semanticweb.org/pastry#sugar
@@ -135,7 +135,7 @@
 :tool_id rdf:type owl:DatatypeProperty ,
                   owl:FunctionalProperty ;
          rdfs:domain :Kitchen_tool ;
-         rdfs:range xsd:double .
+         rdfs:range xsd:integer .
 
 
 ###  http://www.semanticweb.org/pastry#tool_name
