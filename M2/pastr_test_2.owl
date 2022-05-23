@@ -36,7 +36,9 @@
 
 
 ###  http://www.semanticweb.org/pastry#is_step_of
-:is_step_of rdf:type owl:ObjectProperty .
+:is_step_of rdf:type owl:ObjectProperty ;
+            rdfs:domain :Step ;
+            rdfs:range :Recipe .
 
 
 ###  http://www.semanticweb.org/pastry#is_used_by
@@ -95,15 +97,6 @@
       rdfs:range xsd:double .
 
 
-###  http://www.semanticweb.org/pastry#quantity
-:quantity rdf:type owl:DatatypeProperty ;
-          rdfs:domain [ rdf:type owl:Restriction ;
-                        owl:onProperty :has_ingredient ;
-                        owl:someValuesFrom :Food
-                      ] ;
-          rdfs:range xsd:double .
-
-
 ###  http://www.semanticweb.org/pastry#recipe_description
 :recipe_description rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Recipe ;
@@ -156,19 +149,11 @@
 
 ###  http://www.semanticweb.org/pastry#unit
 :unit rdf:type owl:DatatypeProperty ;
-      rdfs:domain [ rdf:type owl:Restriction ;
-                    owl:onProperty :has_ingredient ;
-                    owl:someValuesFrom :Food
-                  ] ;
       rdfs:range rdfs:Literal .
 
 
 ###  http://www.semanticweb.org/pastry#value
 :value rdf:type owl:DatatypeProperty ;
-       rdfs:domain [ rdf:type owl:Restriction ;
-                     owl:onProperty :has_ingredient ;
-                     owl:someValuesFrom :Food
-                   ] ;
        rdfs:range xsd:double .
 
 
@@ -205,11 +190,34 @@
 
 ###  http://www.semanticweb.org/pastry#Step
 :Step rdf:type owl:Class ;
-      owl:hasKey ( :step_nb
+      owl:hasKey ( :recipe_id
+                 ) ,
+                 ( :step_nb
                  ) ;
       rdfs:comment "Step: An instruction or proceeding occurring as one in a series."@en ;
       rdfs:label "step"@en ,
                  "étape"@fr .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/pastry#apple
+:apple rdf:type owl:NamedIndividual ,
+                :Food ;
+       :is_ingredient_of <http://www.semanticweb.org/pastry#3.1> .
+
+
+###  http://www.semanticweb.org/pastry#crepes
+:crepes rdf:type owl:NamedIndividual ,
+                 :Recipe ;
+        :has_step <http://www.semanticweb.org/pastry#3.1> .
+
+
+###  http://www.semanticweb.org/pastry#3.1
+<http://www.semanticweb.org/pastry#3.1> rdf:type owl:NamedIndividual ,
+                                                 :Step .
 
 
 #################################################################

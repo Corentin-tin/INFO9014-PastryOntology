@@ -1,0 +1,252 @@
+@prefix : <http://www.semanticweb.org/pastry#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/pastry> .
+
+<http://www.semanticweb.org/pastry> rdf:type owl:Ontology ;
+                                     rdfs:comment "This is an ontology about pastry recipes with the used food, tools and steps."@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/pastry#has_step
+:has_step rdf:type owl:ObjectProperty ;
+          owl:inverseOf :is_step_of ;
+          rdfs:domain :Recipe ;
+          rdfs:range :Step .
+
+
+###  http://www.semanticweb.org/pastry#is_step_of
+:is_step_of rdf:type owl:ObjectProperty ;
+            rdfs:domain :Step ;
+            rdfs:range :Recipe .
+
+
+###  http://www.semanticweb.org/pastry#is_used_by
+:is_used_by rdf:type owl:ObjectProperty ;
+            owl:inverseOf :uses_tool .
+
+
+###  http://www.semanticweb.org/pastry#quantity_of_food
+:quantity_of_food rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Quantity ;
+                  rdfs:range :Food .
+
+
+###  http://www.semanticweb.org/pastry#step_with_quantity
+:step_with_quantity rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Step ;
+                    rdfs:range :Quantity .
+
+
+###  http://www.semanticweb.org/pastry#uses_tool
+:uses_tool rdf:type owl:ObjectProperty ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Recipe
+                                       :Step
+                                     )
+                       ] ;
+           rdfs:range :Kitchen_tool .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/pastry#categories
+:categories rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Food ;
+            rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/pastry#fat
+:fat rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Food ;
+     rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/pastry#food_id
+:food_id rdf:type owl:DatatypeProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain :Food ;
+         rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/pastry#food_name
+:food_name rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Food ;
+           rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/pastry#instructions_for_use
+:instructions_for_use rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Kitchen_tool ;
+                      rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/pastry#kcal
+:kcal rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Food ;
+      rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/pastry#recipe_description
+:recipe_description rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Recipe ;
+                    rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/pastry#recipe_id
+:recipe_id rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :Recipe ;
+           rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/pastry#recipe_name
+:recipe_name rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Recipe ;
+             rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/pastry#step_description
+:step_description rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Step ;
+                  rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/pastry#step_nb
+:step_nb rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Step ;
+         rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/pastry#sugar
+:sugar rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Food ;
+       rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/pastry#tool_id
+:tool_id rdf:type owl:DatatypeProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain :Kitchen_tool ;
+         rdfs:range xsd:double .
+
+
+###  http://www.semanticweb.org/pastry#tool_name
+:tool_name rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Kitchen_tool ;
+           rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/pastry#unit
+:unit rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Quantity ;
+      rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/pastry#value
+:value rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Quantity ;
+       rdfs:range xsd:double .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/pastry#Food
+:Food rdf:type owl:Class ;
+      owl:hasKey ( :food_id
+                 ) ;
+      rdfs:comment "Food: any nutritious substance that people eat or drink."@en ;
+      rdfs:label "food"@en ,
+                 "nourriture"@fr .
+
+
+###  http://www.semanticweb.org/pastry#Kitchen_tool
+:Kitchen_tool rdf:type owl:Class ;
+              owl:disjointWith :Quantity ;
+              owl:hasKey ( :tool_id
+                         ) ;
+              rdfs:comment "Kitchen tool: object used for food preparation such as baking, mixing, containing, ..."@en ;
+              rdfs:label "kitchen tool"@en ,
+                         "ustensile"@fr .
+
+
+###  http://www.semanticweb.org/pastry#Quantity
+:Quantity rdf:type owl:Class ;
+          owl:hasKey ( :food_id
+                     ) ,
+                     ( :recipe_id
+                     ) ,
+                     ( :step_nb
+                     ) .
+
+
+###  http://www.semanticweb.org/pastry#Recipe
+:Recipe rdf:type owl:Class ;
+        owl:hasKey ( :recipe_id
+                   ) ;
+        rdfs:comment "Recipe: a set of instructions for making something from various ingredients and tools."@en ;
+        rdfs:label "recette"@fr ,
+                   "recipe"@en .
+
+
+###  http://www.semanticweb.org/pastry#Step
+:Step rdf:type owl:Class ;
+      owl:hasKey ( :recipe_id
+                 ) ,
+                 ( :step_nb
+                 ) ;
+      rdfs:comment "Step: An instruction or proceeding occurring as one in a series."@en ;
+      rdfs:label "step"@en ,
+                 "étape"@fr .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/pastry#cinnamon
+:cinnamon rdf:type owl:NamedIndividual ,
+                   :Food .
+
+
+###  http://www.semanticweb.org/pastry#crepes
+:crepes rdf:type owl:NamedIndividual ,
+                 :Recipe ;
+        :has_step <http://www.semanticweb.org/pastry#3.1> .
+
+
+###  http://www.semanticweb.org/pastry#2_pincées
+<http://www.semanticweb.org/pastry#2_pincées> rdf:type owl:NamedIndividual ,
+                                                       :Quantity ;
+                                              :quantity_of_food :cinnamon .
+
+
+###  http://www.semanticweb.org/pastry#3.1
+<http://www.semanticweb.org/pastry#3.1> rdf:type owl:NamedIndividual ,
+                                                 :Step ;
+                                        :step_with_quantity <http://www.semanticweb.org/pastry#2_pincées> .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Food
+                :Kitchen_tool
+                :Recipe
+                :Step
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
