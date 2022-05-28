@@ -170,7 +170,9 @@
 #################################################################
 
 ###  http://www.semanticweb.org/pastry#Categories
-:Categories rdf:type owl:Class .
+:Categories rdf:type owl:Class ;
+            owl:hasKey ( :category_id
+                       ) .
 
 
 ###  http://www.semanticweb.org/pastry#Food
@@ -254,6 +256,17 @@
 #################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Categories
+                :Food
+                :Kitchen_tool
+                :Quantity
+                :Recipe
+                :Step
+              )
+] .
+
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :Food
