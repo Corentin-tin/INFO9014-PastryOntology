@@ -34,9 +34,11 @@
                 2 .
 
 <http://www.semanticweb.org/pastry/Quantity/1:1:4>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 4 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/4> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 1 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -47,9 +49,11 @@
                 5.0E-1 .
 
 <http://www.semanticweb.org/pastry/Quantity/3:1:14>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 14 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/14> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 3 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -67,9 +71,11 @@
                 "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Quantity/2:6:11>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 11 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/11> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 2 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -91,7 +97,7 @@
                 "Ladle"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/UsesTool/3:1:1>
-        a       <http://www.example.org/ont#step_uses_tool> ;
+        a       <http://www.semanticweb.org/pastry#uses_tool> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 3 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -107,9 +113,11 @@
                 "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Quantity/3:4:4>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 4 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/4> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 3 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -137,9 +145,11 @@
                 1.0E-1 .
 
 <http://www.semanticweb.org/pastry/Quantity/3:2:13>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 13 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/13> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 3 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -181,9 +191,11 @@
                 "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Quantity/2:4:9>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 9 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/9> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 2 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -202,10 +214,12 @@
         <http://www.semanticweb.org/pastry#step_description>
                 "Pour  the flour and baked flour in a large mixing bowl. Add the powdered sugar and a pinch of cinnamon. Mix with a spatula."^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
         <http://www.semanticweb.org/pastry#step_nb>
-                1 .
+                1 ;
+        <http://www.semanticweb.org/pastry#step_with_quantity>
+                <http://www.semanticweb.org/pastry/Quantity/3:1:9> , <http://www.semanticweb.org/pastry/Quantity/3:1:14> , <http://www.semanticweb.org/pastry/Quantity/3:1:10> , <http://www.semanticweb.org/pastry/Quantity/3:1:1> .
 
 <http://www.semanticweb.org/pastry/UsesTool/2:4:1>
-        a       <http://www.example.org/ont#step_uses_tool> ;
+        a       <http://www.semanticweb.org/pastry#uses_tool> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 2 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -221,7 +235,7 @@
                 "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/UsesTool/2:2:7>
-        a       <http://www.example.org/ont#step_uses_tool> ;
+        a       <http://www.semanticweb.org/pastry#uses_tool> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 2 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -241,7 +255,7 @@
                 1 .
 
 <http://www.semanticweb.org/pastry/UsesTool/1:1:1>
-        a       <http://www.example.org/ont#step_uses_tool> ;
+        a       <http://www.semanticweb.org/pastry#uses_tool> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 1 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -293,12 +307,16 @@
         <http://www.semanticweb.org/pastry#step_description>
                 "In a large mixing bowl, whisk together the flour and the eggs. Gradually add in the milk and water,  beat until smooth. Add the salt and melted butter."^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
         <http://www.semanticweb.org/pastry#step_nb>
-                1 .
+                1 ;
+        <http://www.semanticweb.org/pastry#step_with_quantity>
+                <http://www.semanticweb.org/pastry/Quantity/1:1:4> , <http://www.semanticweb.org/pastry/Quantity/1:1:1> , <http://www.semanticweb.org/pastry/Quantity/1:1:6> , <http://www.semanticweb.org/pastry/Quantity/1:1:5> , <http://www.semanticweb.org/pastry/Quantity/1:1:3> , <http://www.semanticweb.org/pastry/Quantity/1:1:2> .
 
 <http://www.semanticweb.org/pastry/Quantity/1:1:3>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 3 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/3> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 1 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -309,9 +327,11 @@
                 5.0E-1 .
 
 <http://www.semanticweb.org/pastry/Quantity/3:4:9>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 9 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/9> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 3 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -329,9 +349,11 @@
                 "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Quantity/2:6:10>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 10 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/10> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 2 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -388,9 +410,11 @@
                 0.0E0 .
 
 <http://www.semanticweb.org/pastry/Quantity/3:2:12>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 12 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/12> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 3 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -422,7 +446,9 @@
         <http://www.semanticweb.org/pastry#step_description>
                 "Add the wheat flour, gluten-free baking powder and hazelnut powder. Carefoully mix with the spatula."^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
         <http://www.semanticweb.org/pastry#step_nb>
-                6 .
+                6 ;
+        <http://www.semanticweb.org/pastry#step_with_quantity>
+                <http://www.semanticweb.org/pastry/Quantity/2:6:11> , <http://www.semanticweb.org/pastry/Quantity/2:6:10> , <http://www.semanticweb.org/pastry/Quantity/2:6:1> .
 
 <http://www.semanticweb.org/pastry/Categories/10:1>
         a       <http://www.semanticweb.org/pastry#Category> ;
@@ -432,7 +458,7 @@
                 "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/UsesTool/2:3:6>
-        a       <http://www.example.org/ont#step_uses_tool> ;
+        a       <http://www.semanticweb.org/pastry#uses_tool> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 2 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -441,9 +467,11 @@
                 6 .
 
 <http://www.semanticweb.org/pastry/Quantity/3:1:9>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 9 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/9> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 3 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -454,9 +482,11 @@
                 1.0E1 .
 
 <http://www.semanticweb.org/pastry/Quantity/2:3:8>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 8 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/8> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 2 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -474,9 +504,11 @@
                 "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Quantity/2:4:2>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 2 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/2> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 2 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -515,7 +547,7 @@
                 "Knife"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/UsesTool/2:6:5>
-        a       <http://www.example.org/ont#step_uses_tool> ;
+        a       <http://www.semanticweb.org/pastry#uses_tool> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 2 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -524,7 +556,7 @@
                 5 .
 
 <http://www.semanticweb.org/pastry/UsesTool/3:1:5>
-        a       <http://www.example.org/ont#step_uses_tool> ;
+        a       <http://www.semanticweb.org/pastry#uses_tool> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 3 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -533,9 +565,11 @@
                 5 .
 
 <http://www.semanticweb.org/pastry/Quantity/1:1:2>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 2 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/2> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 1 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -553,7 +587,7 @@
                 "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/UsesTool/1:3:5>
-        a       <http://www.example.org/ont#step_uses_tool> ;
+        a       <http://www.semanticweb.org/pastry#uses_tool> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 1 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -562,7 +596,7 @@
                 5 .
 
 <http://www.semanticweb.org/pastry/UsesTool/2:5:5>
-        a       <http://www.example.org/ont#step_uses_tool> ;
+        a       <http://www.semanticweb.org/pastry#uses_tool> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 2 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -617,9 +651,11 @@
                 0.0E0 .
 
 <http://www.semanticweb.org/pastry/Quantity/2:6:1>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 1 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/1> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 2 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -655,9 +691,11 @@
                 "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Quantity/3:4:15>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 15 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/15> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 3 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -710,9 +748,11 @@
                 "Grater"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Quantity/2:2:7>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 7 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/7> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 2 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -723,9 +763,11 @@
                 2.0E0 .
 
 <http://www.semanticweb.org/pastry/Quantity/1:1:1>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 1 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/1> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 1 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -775,7 +817,9 @@
         <http://www.semanticweb.org/pastry#step_description>
                 "Peel and cut half of the apples in slides. Heat the other apples with some water and powdered sugar until it turns into a compote."^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
         <http://www.semanticweb.org/pastry#step_nb>
-                4 .
+                4 ;
+        <http://www.semanticweb.org/pastry#step_with_quantity>
+                <http://www.semanticweb.org/pastry/Quantity/3:4:9> , <http://www.semanticweb.org/pastry/Quantity/3:4:4> , <http://www.semanticweb.org/pastry/Quantity/3:4:15> .
 
 <http://www.semanticweb.org/pastry/Kitchen_tool/1>
         a       <http://www.semanticweb.org/pastry#Kitchen_tool> ;
@@ -803,7 +847,7 @@
                 "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/UsesTool/1:2:4>
-        a       <http://www.example.org/ont#step_uses_tool> ;
+        a       <http://www.semanticweb.org/pastry#uses_tool> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 1 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -812,7 +856,7 @@
                 4 .
 
 <http://www.semanticweb.org/pastry/UsesTool/3:4:3>
-        a       <http://www.example.org/ont#step_uses_tool> ;
+        a       <http://www.semanticweb.org/pastry#uses_tool> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 3 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -838,7 +882,7 @@
                 4.3E0 .
 
 <http://www.semanticweb.org/pastry/UsesTool/2:7:9>
-        a       <http://www.example.org/ont#step_uses_tool> ;
+        a       <http://www.semanticweb.org/pastry#uses_tool> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 2 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -862,7 +906,9 @@
         <http://www.semanticweb.org/pastry#step_description>
                 "In a large mixing bowl, whisk the eggs and powdered sugar. No need to wait until the liquid turns white."^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
         <http://www.semanticweb.org/pastry#step_nb>
-                4 .
+                4 ;
+        <http://www.semanticweb.org/pastry#step_with_quantity>
+                <http://www.semanticweb.org/pastry/Quantity/2:4:9> , <http://www.semanticweb.org/pastry/Quantity/2:4:2> .
 
 <http://www.semanticweb.org/pastry/Categories/5:2>
         a       <http://www.semanticweb.org/pastry#Category> ;
@@ -872,9 +918,11 @@
                 "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Quantity/1:1:6>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 6 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/6> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 1 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -927,9 +975,11 @@
                 "Medium mixing bowl"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Quantity/3:1:1>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 1 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/1> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 3 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -940,9 +990,11 @@
                 1.0E0 .
 
 <http://www.semanticweb.org/pastry/Quantity/3:1:10>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 10 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/10> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 3 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -953,7 +1005,7 @@
                 2.5E-1 .
 
 <http://www.semanticweb.org/pastry/UsesTool/3:4:8>
-        a       <http://www.example.org/ont#step_uses_tool> ;
+        a       <http://www.semanticweb.org/pastry#uses_tool> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 3 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -986,7 +1038,7 @@
                 3.1E0 .
 
 <http://www.semanticweb.org/pastry/UsesTool/3:3:10>
-        a       <http://www.example.org/ont#step_uses_tool> ;
+        a       <http://www.semanticweb.org/pastry#uses_tool> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 3 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -995,7 +1047,7 @@
                 10 .
 
 <http://www.semanticweb.org/pastry/UsesTool/2:8:8>
-        a       <http://www.example.org/ont#step_uses_tool> ;
+        a       <http://www.semanticweb.org/pastry#uses_tool> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 2 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -1022,7 +1074,7 @@
                 3 .
 
 <http://www.semanticweb.org/pastry/UsesTool/1:2:3>
-        a       <http://www.example.org/ont#step_uses_tool> ;
+        a       <http://www.semanticweb.org/pastry#uses_tool> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 1 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -1063,7 +1115,9 @@
         <http://www.semanticweb.org/pastry#step_description>
                 "In a medium mixing bowl, break the chocolate. Melt it in microwave or bain-marie"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
         <http://www.semanticweb.org/pastry#step_nb>
-                3 .
+                3 ;
+        <http://www.semanticweb.org/pastry#step_with_quantity>
+                <http://www.semanticweb.org/pastry/Quantity/2:3:8> .
 
 <http://www.semanticweb.org/pastry/Categories/6:1>
         a       <http://www.semanticweb.org/pastry#Category> ;
@@ -1120,9 +1174,11 @@
                 "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Quantity/1:1:5>
-        a       <http://www.semanticweb.org/pastry#Recipe> ;
+        a       <http://www.semanticweb.org/pastry#Quantity> ;
         <http://www.semanticweb.org/pastry#food_id>
                 5 ;
+        <http://www.semanticweb.org/pastry#quantity_of_food>
+                <http://www.semanticweb.org/pastry/Food/5> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 1 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -1239,7 +1295,9 @@
         <http://www.semanticweb.org/pastry#step_description>
                 "Make a well in the center. Add the colza oil and soybean milk. Knead until you get an elastic bowl."^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
         <http://www.semanticweb.org/pastry#step_nb>
-                2 .
+                2 ;
+        <http://www.semanticweb.org/pastry#step_with_quantity>
+                <http://www.semanticweb.org/pastry/Quantity/3:2:13> , <http://www.semanticweb.org/pastry/Quantity/3:2:12> .
 
 <http://www.semanticweb.org/pastry/Categories/2:1>
         a       <http://www.semanticweb.org/pastry#Category> ;
@@ -1249,7 +1307,7 @@
                 "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/UsesTool/2:4:2>
-        a       <http://www.example.org/ont#step_uses_tool> ;
+        a       <http://www.semanticweb.org/pastry#uses_tool> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 2 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -1282,7 +1340,7 @@
                 "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/UsesTool/2:2:8>
-        a       <http://www.example.org/ont#step_uses_tool> ;
+        a       <http://www.semanticweb.org/pastry#uses_tool> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 2 ;
         <http://www.semanticweb.org/pastry#step_nb>
@@ -1299,7 +1357,9 @@
         <http://www.semanticweb.org/pastry#step_description>
                 "Peel the zucchinis and grate them with a grater"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
         <http://www.semanticweb.org/pastry#step_nb>
-                2 .
+                2 ;
+        <http://www.semanticweb.org/pastry#step_with_quantity>
+                <http://www.semanticweb.org/pastry/Quantity/2:2:7> .
 
 <http://www.semanticweb.org/pastry/Categories/1:1>
         a       <http://www.semanticweb.org/pastry#Category> ;
@@ -1309,7 +1369,7 @@
                 "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/UsesTool/1:1:2>
-        a       <http://www.example.org/ont#step_uses_tool> ;
+        a       <http://www.semanticweb.org/pastry#uses_tool> ;
         <http://www.semanticweb.org/pastry#recipe_id>
                 1 ;
         <http://www.semanticweb.org/pastry#step_nb>

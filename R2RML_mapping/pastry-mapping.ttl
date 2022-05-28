@@ -173,7 +173,7 @@
 
 	 rr:subjectMap [
 	 	rr:template "http://www.semanticweb.org/pastry/Quantity/{RECIPE_ID}:{STEP_NB}:{FOOD_ID}" ;
-	 	rr:class :Recipe ;
+	 	rr:class :Quantity ;
 	 ] ; 
 
 	 rr:predicateObjectMap [
@@ -213,6 +213,17 @@
 	 	rr:objectMap [
 	 		rr:column "VALUE" ;
 	 		rr:datatype xsd:double ;
+	 	] ;
+	 ] ;
+
+	 rr:predicateObjectMap [
+	 	rr:predicate :quantity_of_food ;
+	 	rr:objectMap [
+	 		rr:parentTriplesMap <#Food> ;
+	 		rr:joinCondition [
+	 			rr:child "FOOD_ID" ;
+	 			rr:parent "ID" ;
+	 		] ;
 	 	] ;
 	 ] .
 
@@ -323,6 +334,21 @@
 	 			rr:parent "ID" ;
 	 		] ;
 	 	] ;
+	 ] ;
+
+	 rr:predicateObjectMap [
+	 	rr:predicate :step_with_quantity ;
+	 	rr:objectMap [
+	 		rr:parentTriplesMap <#Quantity> ;
+	 		rr:joinCondition [
+	 			rr:child "RECIPE_ID" ;
+	 			rr:parent "RECIPE_ID" ;
+	 		] ;
+	 		rr:joinCondition [
+	 			rr:child "STEP_NB" ;
+	 			rr:parent "STEP_NB" ;
+	 		] ;
+	 	] ;
 	 ] .
 
 #################################################################
@@ -336,7 +362,7 @@
 
 	 rr:subjectMap [
 	 	rr:template "http://www.semanticweb.org/pastry/UsesTool/{RECIPE_ID}:{STEP_NB}:{TOOL_ID}" ;
-	 	rr:class fcc:step_uses_tool ;
+	 	rr:class :uses_tool ;
 	 ] ; 
 
 	 rr:predicateObjectMap [
