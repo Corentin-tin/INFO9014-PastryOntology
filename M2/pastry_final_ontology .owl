@@ -59,6 +59,13 @@
 #    Data properties
 #################################################################
 
+###  http://www.semanticweb.org/pastry#category_id
+:category_id rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :Categories ;
+             rdfs:range xsd:integer .
+
+
 ###  http://www.semanticweb.org/pastry#category_name
 :category_name rdf:type owl:DatatypeProperty ;
                rdfs:domain :Categories ;
