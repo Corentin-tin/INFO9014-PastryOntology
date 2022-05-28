@@ -13,6 +13,12 @@
 #    Object Properties
 #################################################################
 
+###  http://www.semanticweb.org/pastry#has_category
+:has_category rdf:type owl:ObjectProperty ;
+              rdfs:domain :Food ;
+              rdfs:range :Categories .
+
+
 ###  http://www.semanticweb.org/pastry#has_step
 :has_step rdf:type owl:ObjectProperty ;
           owl:inverseOf :is_step_of ;
@@ -45,11 +51,7 @@
 
 ###  http://www.semanticweb.org/pastry#uses_tool
 :uses_tool rdf:type owl:ObjectProperty ;
-           rdfs:domain [ rdf:type owl:Class ;
-                         owl:unionOf ( :Recipe
-                                       :Step
-                                     )
-                       ] ;
+           rdfs:domain :Step ;
            rdfs:range :Kitchen_tool .
 
 
@@ -57,10 +59,17 @@
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/pastry#categories
-:categories rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Food ;
-            rdfs:range rdfs:Literal .
+###  http://www.semanticweb.org/pastry#category_id
+:category_id rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :Categories ;
+             rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/pastry#category_name
+:category_name rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Categories ;
+               rdfs:range rdfs:Literal .
 
 
 ###  http://www.semanticweb.org/pastry#fat
@@ -73,7 +82,7 @@
 :food_id rdf:type owl:DatatypeProperty ,
                   owl:FunctionalProperty ;
          rdfs:domain :Food ;
-         rdfs:range xsd:double .
+         rdfs:range xsd:integer .
 
 
 ###  http://www.semanticweb.org/pastry#food_name
@@ -104,7 +113,7 @@
 :recipe_id rdf:type owl:DatatypeProperty ,
                     owl:FunctionalProperty ;
            rdfs:domain :Recipe ;
-           rdfs:range xsd:double .
+           rdfs:range xsd:integer .
 
 
 ###  http://www.semanticweb.org/pastry#recipe_name
@@ -122,7 +131,7 @@
 ###  http://www.semanticweb.org/pastry#step_nb
 :step_nb rdf:type owl:DatatypeProperty ;
          rdfs:domain :Step ;
-         rdfs:range xsd:double .
+         rdfs:range xsd:integer .
 
 
 ###  http://www.semanticweb.org/pastry#sugar
@@ -135,7 +144,7 @@
 :tool_id rdf:type owl:DatatypeProperty ,
                   owl:FunctionalProperty ;
          rdfs:domain :Kitchen_tool ;
-         rdfs:range xsd:double .
+         rdfs:range xsd:integer .
 
 
 ###  http://www.semanticweb.org/pastry#tool_name
@@ -159,6 +168,12 @@
 #################################################################
 #    Classes
 #################################################################
+
+###  http://www.semanticweb.org/pastry#Categories
+:Categories rdf:type owl:Class ;
+            owl:hasKey ( :category_id
+                       ) .
+
 
 ###  http://www.semanticweb.org/pastry#Food
 :Food rdf:type owl:Class ;
@@ -213,27 +228,29 @@
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/pastry#cinnamon
-:cinnamon rdf:type owl:NamedIndividual ,
-                   :Food .
+###  http://www.semanticweb.org/pastry#chocolate
+:chocolate rdf:type owl:NamedIndividual ,
+                    :Food ;
+           :has_category :vegan ,
+                         :vegetarian .
 
 
-###  http://www.semanticweb.org/pastry#crepes
-:crepes rdf:type owl:NamedIndividual ,
-                 :Recipe ;
-        :has_step <http://www.semanticweb.org/pastry#3.1> .
+###  http://www.semanticweb.org/pastry#gluten-free
+:gluten-free rdf:type owl:NamedIndividual ,
+                      :Categories ;
+             :category_name "gluten-free" .
 
 
-###  http://www.semanticweb.org/pastry#2_pincées
-<http://www.semanticweb.org/pastry#2_pincées> rdf:type owl:NamedIndividual ,
-                                                       :Quantity ;
-                                              :quantity_of_food :cinnamon .
+###  http://www.semanticweb.org/pastry#vegan
+:vegan rdf:type owl:NamedIndividual ,
+                :Categories ;
+       :category_name "vegan" .
 
 
-###  http://www.semanticweb.org/pastry#3.1
-<http://www.semanticweb.org/pastry#3.1> rdf:type owl:NamedIndividual ,
-                                                 :Step ;
-                                        :step_with_quantity <http://www.semanticweb.org/pastry#2_pincées> .
+###  http://www.semanticweb.org/pastry#vegetarian
+:vegetarian rdf:type owl:NamedIndividual ,
+                     :Categories ;
+            :category_name "vegetarian" .
 
 
 #################################################################
@@ -241,11 +258,43 @@
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Categories
+                :Food
+                :Kitchen_tool
+                :Quantity
+                :Recipe
+                :Step
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
   owl:members ( :Food
                 :Kitchen_tool
                 :Recipe
                 :Step
               )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :gluten-free
+                        :vegan
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :gluten-free
+                        :vegetarian
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :vegan
+                        :vegetarian
+                      )
 ] .
 
 
