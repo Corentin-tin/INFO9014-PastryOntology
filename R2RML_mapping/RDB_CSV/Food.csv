@@ -1,16 +1,16 @@
 id,name,fat,sugar,kcal
-"1,""Wheat flour"",1.87,0.41,0.339"
+1,Wheat flour,1.87,0.41,0.339
 2,Egg,10.6,0,0.155
-"3,""Semi–skimmed milk"",1.6,4.3,0.47"
+3,Semi–skimmed milk,1.6,4.3,0.47
 4,Water,0,0,0
 5,Salt,0,0,0
 6,Butter,81,0.1,0.707
 7,Zucchini,0,0,20.2
-"8,""Dark chocolate"",6.2,3.1,53"
-"9,""Powdered sugar"",0,0,14.5,58"
-"10,""Gluten-free baking powder"",0,9,45.2"
-"11,""Hazelnut powder"",2.3,3.4,40"
-"12,""Colza oil"",10,0,90"
-"13,""Soybean milk"",0.1,0.1,2"
+8,Dark chocolate,6.2,3.1,53
+9,Powdered sugar,0.0,14.5,58
+10,Gluten-free baking powder,0,9,45.2
+11,Hazelnut powder,2.3,3.4,40
+12,Colza oil,10,0,90
+13,Soybean milk,0.1,0.1,2
 14,Cinnamon,0,0,0
 15,Apple,0,8.1,30.0
