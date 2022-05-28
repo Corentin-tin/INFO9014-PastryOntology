@@ -15,9 +15,7 @@
 
 ###  http://www.semanticweb.org/pastry#food_has_quantity
 :food_has_quantity rdf:type owl:ObjectProperty ;
-                   owl:inverseOf :quantity_of_food ;
-                   rdfs:domain :Food ;
-                   rdfs:range :Quantity .
+                   owl:inverseOf :quantity_of_food .
 
 
 ###  http://www.semanticweb.org/pastry#has_category
@@ -35,15 +33,11 @@
 
 
 ###  http://www.semanticweb.org/pastry#is_category_of
-:is_category_of rdf:type owl:ObjectProperty ;
-                rdfs:domain :Categories ;
-                rdfs:range :Food .
+:is_category_of rdf:type owl:ObjectProperty .
 
 
 ###  http://www.semanticweb.org/pastry#is_step_of
-:is_step_of rdf:type owl:ObjectProperty ;
-            rdfs:domain :Step ;
-            rdfs:range :Recipe .
+:is_step_of rdf:type owl:ObjectProperty .
 
 
 ###  http://www.semanticweb.org/pastry#is_used_by
