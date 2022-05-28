@@ -73,6 +73,47 @@
 	 ] .
 
 #################################################################
+#    					     CATEGORIES   					   	#
+#################################################################
+
+<#Categories>
+	a rr:TripleMap ;
+
+	 rr:logicalTable [ rr:tableName "CATEGORIES" ] ;
+
+	 rr:subjectMap [
+	 	rr:template "http://www.semanticweb.org/pastry/Categories/{FOOD_ID}:{CAT_ID}" ;
+	 	rr:class :Category ;
+	 ] ; 
+
+	 rr:predicateObjectMap [
+	 	rr:predicate :category_id ;
+	 	rr:objectMap [
+	 		rr:column "CAT_ID" ;
+	 		rr:datatype xsd:integer ;
+	 	] ;
+	 ] ;
+
+	 rr:predicateObjectMap [
+	 	rr:predicate :category_name ;
+	 	rr:objectMap [
+	 		rr:column "CATEGORY" ;
+	 		rr:datatype rdfs:Literal ;
+	 	] ;
+	 ] ;
+
+	 rr:predicateObjectMap [
+	 	rr:predicate :has_category ;
+	 	rr:objectMap [
+	 		rr:parentTriplesMap <#Food> ;
+	 		rr:joinCondition [
+	 			rr:child "FOOD_ID" ;
+	 			rr:parent "ID" ;
+	 		] ;
+	 	] ;
+	 ] .
+
+#################################################################
 #    					  KITCHEN_TOOL 							#
 #################################################################
 
@@ -128,7 +169,7 @@
 <#Quantity>
 	a rr:TripleMap ;
 
-	 rr:logicalTable [ rr:tableName "FOODREQUIRED" ] ;
+	 rr:logicalTable [ rr:tableName "HASINGREDIENT" ] ;
 
 	 rr:subjectMap [
 	 	rr:template "http://www.semanticweb.org/pastry/Quantity/{RECIPE_ID}:{STEP_NB}:{FOOD_ID}" ;
@@ -321,50 +362,3 @@
 	 		rr:datatype xsd:integer ;
 	 	] ;
 	 ] .
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
