@@ -70,6 +70,17 @@
 	 		rr:column "KCAL" ;
 	 		rr:datatype xsd:double ;
 	 	] ;
+	 ] ;
+
+	 rr:predicateObjectMap [
+	 	rr:predicate :has_category ;
+	 	rr:objectMap [
+	 		rr:parentTriplesMap <#Categories> ;
+	 		rr:joinCondition [
+	 			rr:child "ID" ;
+	 			rr:parent "FOOD_ID" ;
+	 		] ;
+	 	] ;
 	 ] .
 
 #################################################################
@@ -99,17 +110,6 @@
 	 	rr:objectMap [
 	 		rr:column "CATEGORY" ;
 	 		rr:datatype rdfs:Literal ;
-	 	] ;
-	 ] ;
-
-	 rr:predicateObjectMap [
-	 	rr:predicate :has_category ;
-	 	rr:objectMap [
-	 		rr:parentTriplesMap <#Food> ;
-	 		rr:joinCondition [
-	 			rr:child "FOOD_ID" ;
-	 			rr:parent "ID" ;
-	 		] ;
 	 	] ;
 	 ] .
 

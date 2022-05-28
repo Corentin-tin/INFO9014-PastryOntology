@@ -8,6 +8,8 @@
                 14 ;
         <http://www.semanticweb.org/pastry#food_name>
                 "Cinnamon"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.semanticweb.org/pastry#has_category>
+                <http://www.semanticweb.org/pastry/Categories/14:2> , <http://www.semanticweb.org/pastry/Categories/14:1> , <http://www.semanticweb.org/pastry/Categories/14:3> ;
         <http://www.semanticweb.org/pastry#kcal>
                 0.0E0 ;
         <http://www.semanticweb.org/pastry#sugar>
@@ -18,9 +20,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 2 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/13> .
+                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Step/1:2>
         a       <http://www.semanticweb.org/pastry#Step> ;
@@ -64,9 +64,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 2 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/12> .
+                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Quantity/2:6:11>
         a       <http://www.semanticweb.org/pastry#Recipe> ;
@@ -106,9 +104,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 2 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/11> .
+                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Quantity/3:4:4>
         a       <http://www.semanticweb.org/pastry#Recipe> ;
@@ -133,6 +129,8 @@
                 6 ;
         <http://www.semanticweb.org/pastry#food_name>
                 "Butter"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.semanticweb.org/pastry#has_category>
+                <http://www.semanticweb.org/pastry/Categories/6:2> , <http://www.semanticweb.org/pastry/Categories/6:3> , <http://www.semanticweb.org/pastry/Categories/6:1> ;
         <http://www.semanticweb.org/pastry#kcal>
                 7.07E-1 ;
         <http://www.semanticweb.org/pastry#sugar>
@@ -180,9 +178,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 2 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/10> .
+                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Quantity/2:4:9>
         a       <http://www.semanticweb.org/pastry#Recipe> ;
@@ -222,9 +218,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 1 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/14> .
+                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/UsesTool/2:2:7>
         a       <http://www.example.org/ont#step_uses_tool> ;
@@ -265,6 +259,8 @@
                 13 ;
         <http://www.semanticweb.org/pastry#food_name>
                 "Soybean milk"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.semanticweb.org/pastry#has_category>
+                <http://www.semanticweb.org/pastry/Categories/13:1> , <http://www.semanticweb.org/pastry/Categories/13:3> , <http://www.semanticweb.org/pastry/Categories/13:2> ;
         <http://www.semanticweb.org/pastry#kcal>
                 2.0E0 ;
         <http://www.semanticweb.org/pastry#sugar>
@@ -275,9 +271,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 1 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/13> .
+                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Kitchen_tool/9>
         a       <http://www.semanticweb.org/pastry#Kitchen_tool> ;
@@ -332,9 +326,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 1 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/12> .
+                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Quantity/2:6:10>
         a       <http://www.semanticweb.org/pastry#Recipe> ;
@@ -376,9 +368,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 1 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/11> .
+                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Food/5>
         a       <http://www.semanticweb.org/pastry#Food> ;
@@ -390,6 +380,8 @@
                 5 ;
         <http://www.semanticweb.org/pastry#food_name>
                 "Salt"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.semanticweb.org/pastry#has_category>
+                <http://www.semanticweb.org/pastry/Categories/5:3> , <http://www.semanticweb.org/pastry/Categories/5:1> , <http://www.semanticweb.org/pastry/Categories/5:2> ;
         <http://www.semanticweb.org/pastry#kcal>
                 0.0E0 ;
         <http://www.semanticweb.org/pastry#sugar>
@@ -437,9 +429,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 1 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/10> .
+                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/UsesTool/2:3:6>
         a       <http://www.example.org/ont#step_uses_tool> ;
@@ -481,9 +471,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 3 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/9> .
+                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Quantity/2:4:2>
         a       <http://www.semanticweb.org/pastry#Recipe> ;
@@ -508,6 +496,8 @@
                 12 ;
         <http://www.semanticweb.org/pastry#food_name>
                 "Colza oil"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.semanticweb.org/pastry#has_category>
+                <http://www.semanticweb.org/pastry/Categories/12:1> , <http://www.semanticweb.org/pastry/Categories/12:2> , <http://www.semanticweb.org/pastry/Categories/12:3> ;
         <http://www.semanticweb.org/pastry#kcal>
                 9.0E1 ;
         <http://www.semanticweb.org/pastry#sugar>
@@ -560,9 +550,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 3 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/8> .
+                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/UsesTool/1:3:5>
         a       <http://www.example.org/ont#step_uses_tool> ;
@@ -598,9 +586,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 3 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/7> .
+                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Step/3:5>
         a       <http://www.semanticweb.org/pastry#Step> ;
@@ -623,6 +609,8 @@
                 4 ;
         <http://www.semanticweb.org/pastry#food_name>
                 "Water"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.semanticweb.org/pastry#has_category>
+                <http://www.semanticweb.org/pastry/Categories/4:3> , <http://www.semanticweb.org/pastry/Categories/4:1> , <http://www.semanticweb.org/pastry/Categories/4:2> ;
         <http://www.semanticweb.org/pastry#kcal>
                 0.0E0 ;
         <http://www.semanticweb.org/pastry#sugar>
@@ -646,9 +634,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 3 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/6> .
+                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Step/2:5>
         a       <http://www.semanticweb.org/pastry#Step> ;
@@ -666,9 +652,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 3 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/5> .
+                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Quantity/3:4:15>
         a       <http://www.semanticweb.org/pastry#Recipe> ;
@@ -688,18 +672,14 @@
         <http://www.semanticweb.org/pastry#category_id>
                 2 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/9> .
+                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Categories/4:3>
         a       <http://www.semanticweb.org/pastry#Category> ;
         <http://www.semanticweb.org/pastry#category_id>
                 3 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/4> .
+                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Food/11>
         a       <http://www.semanticweb.org/pastry#Food> ;
@@ -711,6 +691,8 @@
                 11 ;
         <http://www.semanticweb.org/pastry#food_name>
                 "Hazelnut powder"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.semanticweb.org/pastry#has_category>
+                <http://www.semanticweb.org/pastry/Categories/11:3> , <http://www.semanticweb.org/pastry/Categories/11:1> , <http://www.semanticweb.org/pastry/Categories/11:2> ;
         <http://www.semanticweb.org/pastry#kcal>
                 4.0E1 ;
         <http://www.semanticweb.org/pastry#sugar>
@@ -763,6 +745,8 @@
                 9 ;
         <http://www.semanticweb.org/pastry#food_name>
                 "Powdered sugar"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.semanticweb.org/pastry#has_category>
+                <http://www.semanticweb.org/pastry/Categories/9:2> , <http://www.semanticweb.org/pastry/Categories/9:3> , <http://www.semanticweb.org/pastry/Categories/9:1> ;
         <http://www.semanticweb.org/pastry#kcal>
                 5.8E1 ;
         <http://www.semanticweb.org/pastry#sugar>
@@ -773,18 +757,14 @@
         <http://www.semanticweb.org/pastry#category_id>
                 2 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/8> .
+                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Categories/3:3>
         a       <http://www.semanticweb.org/pastry#Category> ;
         <http://www.semanticweb.org/pastry#category_id>
                 3 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/3> .
+                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Step/3:4>
         a       <http://www.semanticweb.org/pastry#Step> ;
@@ -813,18 +793,14 @@
         <http://www.semanticweb.org/pastry#category_id>
                 2 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/7> .
+                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Categories/2:3>
         a       <http://www.semanticweb.org/pastry#Category> ;
         <http://www.semanticweb.org/pastry#category_id>
                 3 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/2> .
+                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/UsesTool/1:2:4>
         a       <http://www.example.org/ont#step_uses_tool> ;
@@ -854,6 +830,8 @@
                 3 ;
         <http://www.semanticweb.org/pastry#food_name>
                 "Semi–skimmed milk"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.semanticweb.org/pastry#has_category>
+                <http://www.semanticweb.org/pastry/Categories/3:1> , <http://www.semanticweb.org/pastry/Categories/3:3> ;
         <http://www.semanticweb.org/pastry#kcal>
                 4.7E-1 ;
         <http://www.semanticweb.org/pastry#sugar>
@@ -873,9 +851,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 2 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/6> .
+                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Step/2:4>
         a       <http://www.semanticweb.org/pastry#Step> ;
@@ -893,9 +869,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 2 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/5> .
+                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Quantity/1:1:6>
         a       <http://www.semanticweb.org/pastry#Recipe> ;
@@ -915,18 +889,14 @@
         <http://www.semanticweb.org/pastry#category_id>
                 1 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/9> .
+                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Categories/4:2>
         a       <http://www.semanticweb.org/pastry#Category> ;
         <http://www.semanticweb.org/pastry#category_id>
                 2 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/4> .
+                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Food/10>
         a       <http://www.semanticweb.org/pastry#Food> ;
@@ -938,6 +908,8 @@
                 10 ;
         <http://www.semanticweb.org/pastry#food_name>
                 "Gluten-free baking powder"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.semanticweb.org/pastry#has_category>
+                <http://www.semanticweb.org/pastry/Categories/10:1> , <http://www.semanticweb.org/pastry/Categories/10:2> , <http://www.semanticweb.org/pastry/Categories/10:3> ;
         <http://www.semanticweb.org/pastry#kcal>
                 4.52E1 ;
         <http://www.semanticweb.org/pastry#sugar>
@@ -994,9 +966,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 1 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/8> .
+                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Food/8>
         a       <http://www.semanticweb.org/pastry#Food> ;
@@ -1008,6 +978,8 @@
                 8 ;
         <http://www.semanticweb.org/pastry#food_name>
                 "Dark chocolate"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.semanticweb.org/pastry#has_category>
+                <http://www.semanticweb.org/pastry/Categories/8:1> , <http://www.semanticweb.org/pastry/Categories/8:3> , <http://www.semanticweb.org/pastry/Categories/8:2> ;
         <http://www.semanticweb.org/pastry#kcal>
                 5.3E1 ;
         <http://www.semanticweb.org/pastry#sugar>
@@ -1036,9 +1008,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 1 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/7> .
+                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Step/3:3>
         a       <http://www.semanticweb.org/pastry#Step> ;
@@ -1070,6 +1040,8 @@
                 2 ;
         <http://www.semanticweb.org/pastry#food_name>
                 "Egg"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.semanticweb.org/pastry#has_category>
+                <http://www.semanticweb.org/pastry/Categories/2:3> , <http://www.semanticweb.org/pastry/Categories/2:1> ;
         <http://www.semanticweb.org/pastry#kcal>
                 1.55E-1 ;
         <http://www.semanticweb.org/pastry#sugar>
@@ -1080,9 +1052,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 3 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/14> .
+                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Step/2:3>
         a       <http://www.semanticweb.org/pastry#Step> ;
@@ -1100,18 +1070,14 @@
         <http://www.semanticweb.org/pastry#category_id>
                 1 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/6> .
+                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Categories/1:2>
         a       <http://www.semanticweb.org/pastry#Category> ;
         <http://www.semanticweb.org/pastry#category_id>
                 2 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/1> .
+                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Food/15>
         a       <http://www.semanticweb.org/pastry#Food> ;
@@ -1133,9 +1099,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 3 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/13> .
+                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Step/1:3>
         a       <http://www.semanticweb.org/pastry#Step> ;
@@ -1153,9 +1117,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 1 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/5> .
+                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Quantity/1:1:5>
         a       <http://www.semanticweb.org/pastry#Recipe> ;
@@ -1175,18 +1137,14 @@
         <http://www.semanticweb.org/pastry#category_id>
                 3 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/12> .
+                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Categories/4:1>
         a       <http://www.semanticweb.org/pastry#Category> ;
         <http://www.semanticweb.org/pastry#category_id>
                 1 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/4> .
+                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Kitchen_tool/10>
         a       <http://www.semanticweb.org/pastry#Kitchen_tool> ;
@@ -1215,9 +1173,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 3 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/11> .
+                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Food/7>
         a       <http://www.semanticweb.org/pastry#Food> ;
@@ -1229,6 +1185,8 @@
                 7 ;
         <http://www.semanticweb.org/pastry#food_name>
                 "Zucchini"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.semanticweb.org/pastry#has_category>
+                <http://www.semanticweb.org/pastry/Categories/7:1> , <http://www.semanticweb.org/pastry/Categories/7:2> , <http://www.semanticweb.org/pastry/Categories/7:3> ;
         <http://www.semanticweb.org/pastry#kcal>
                 2.02E1 ;
         <http://www.semanticweb.org/pastry#sugar>
@@ -1239,9 +1197,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 1 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/3> .
+                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Recipe/3>
         a       <http://www.semanticweb.org/pastry#Recipe> ;
@@ -1272,9 +1228,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 3 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/10> .
+                "gluten-free"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/Step/3:2>
         a       <http://www.semanticweb.org/pastry#Step> ;
@@ -1292,9 +1246,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 1 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/2> .
+                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/UsesTool/2:4:2>
         a       <http://www.example.org/ont#step_uses_tool> ;
@@ -1315,6 +1267,8 @@
                 1 ;
         <http://www.semanticweb.org/pastry#food_name>
                 "Wheat flour"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
+        <http://www.semanticweb.org/pastry#has_category>
+                <http://www.semanticweb.org/pastry/Categories/1:2> , <http://www.semanticweb.org/pastry/Categories/1:1> ;
         <http://www.semanticweb.org/pastry#kcal>
                 3.39E-1 ;
         <http://www.semanticweb.org/pastry#sugar>
@@ -1325,9 +1279,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 2 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/14> .
+                "vegan"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/UsesTool/2:2:8>
         a       <http://www.example.org/ont#step_uses_tool> ;
@@ -1354,9 +1306,7 @@
         <http://www.semanticweb.org/pastry#category_id>
                 1 ;
         <http://www.semanticweb.org/pastry#category_name>
-                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> ;
-        <http://www.semanticweb.org/pastry#has_category>
-                <http://www.semanticweb.org/pastry/Food/1> .
+                "vegetarian"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <http://www.semanticweb.org/pastry/UsesTool/1:1:2>
         a       <http://www.example.org/ont#step_uses_tool> ;
