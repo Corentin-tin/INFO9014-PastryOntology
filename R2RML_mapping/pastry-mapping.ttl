@@ -5,8 +5,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix fcc: <http://www.example.org/ont#>
-@base <http://www.semanticweb.org/pastry> .
+@prefix fcc: <http://www.example.org/ont#> .
 
 #################################################################
 #    							FOOD 							#
@@ -18,7 +17,7 @@
 	 rr:logicalTable [ rr:tableName "FOOD" ] ;
 
 	 rr:subjectMap [
-	 	rr:template "http://www.semanticweb.org/pastry#Food/{ID}" ;
+	 	rr:template "http://www.semanticweb.org/pastry/Food/{ID}" ;
 	 	rr:class :Food ;
 	 ] ; 
 
@@ -83,7 +82,7 @@
 	 rr:logicalTable [ rr:tableName "KITCHENTOOL" ] ;
 
 	 rr:subjectMap [
-	 	rr:template "http://www.semanticweb.org/pastry#Kitchen_tool/{ID}" ;
+	 	rr:template "http://www.semanticweb.org/pastry/Kitchen_tool/{ID}" ;
 	 	rr:class :Kitchen_tool ;
 	 ] ; 
 
@@ -132,7 +131,7 @@
 	 rr:logicalTable [ rr:tableName "FOODREQUIRED" ] ;
 
 	 rr:subjectMap [
-	 	rr:template "http://www.semanticweb.org/pastry#Quantity/{RECIPE_ID}:{STEP_NB}:{FOOD_ID}" ;
+	 	rr:template "http://www.semanticweb.org/pastry/Quantity/{RECIPE_ID}:{STEP_NB}:{FOOD_ID}" ;
 	 	rr:class :Recipe ;
 	 ] ; 
 
@@ -186,7 +185,7 @@
 	 rr:logicalTable [ rr:tableName "RECIPE" ] ;
 
 	 rr:subjectMap [
-	 	rr:template "http://www.semanticweb.org/pastry#Recipe/{ID}" ;
+	 	rr:template "http://www.semanticweb.org/pastry/Recipe/{ID}" ;
 	 	rr:class :Recipe ;
 	 ] ; 
 
@@ -246,7 +245,7 @@
 	 rr:logicalTable [ rr:tableName "STEP" ] ;
 
 	 rr:subjectMap [
-	 	rr:template "http://www.semanticweb.org/pastry#Step/{RECIPE_ID}:{STEP_NB}" ;
+	 	rr:template "http://www.semanticweb.org/pastry/Step/{RECIPE_ID}:{STEP_NB}" ;
 	 	rr:class :Step ;
 	 ] ; 
 
@@ -295,8 +294,8 @@
 	 rr:logicalTable [ rr:tableName "USESTOOL" ] ;
 
 	 rr:subjectMap [
-	 	rr:template "http://www.example.org/ont#/{RECIPE_ID}:{STEP_NB}:{TOOL_ID}" ;
-	 	rr:class fcc:step_has_tool ;
+	 	rr:template "http://www.semanticweb.org/pastry/UsesTool/{RECIPE_ID}:{STEP_NB}:{TOOL_ID}" ;
+	 	rr:class fcc:step_uses_tool ;
 	 ] ; 
 
 	 rr:predicateObjectMap [
